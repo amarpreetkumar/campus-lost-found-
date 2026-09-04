@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { apiUrl } from '../services/api';
 import "./claim.css";
 
 function ClaimPage() {
@@ -39,7 +40,7 @@ function ClaimPage() {
       setLoading(true);
 
       const res = await fetch(
-        "http://localhost:5000/api/claims",
+        apiUrl('/claims'),
         {
           method: "POST",
 

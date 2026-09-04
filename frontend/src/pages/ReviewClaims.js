@@ -3,6 +3,7 @@ import React, {
   useState
 } from "react";
 
+import { apiUrl } from '../services/api';
 import "./reviewclaims.css";
 
 function ReviewClaims() {
@@ -20,7 +21,7 @@ function ReviewClaims() {
       localStorage.getItem("token");
 
     const res = await fetch(
-      "http://localhost:5000/api/claims",
+      apiUrl('/claims'),
       {
         headers: {
           Authorization:
@@ -48,7 +49,7 @@ function ReviewClaims() {
       localStorage.getItem("token");
 
     await fetch(
-      `http://localhost:5000/api/claims/${id}/approve`,
+      apiUrl(`/claims/${id}/approve`),
       {
         method: "POST",
 
@@ -70,7 +71,7 @@ function ReviewClaims() {
       localStorage.getItem("token");
 
     await fetch(
-      `http://localhost:5000/api/claims/${id}/reject`,
+      apiUrl(`/claims/${id}/reject`),
       {
         method: "POST",
 
@@ -217,3 +218,4 @@ function ReviewClaims() {
 }
 
 export default ReviewClaims;
+

@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+import { API_URL } from './api';
 
 export const register = async (userId, password) => {
   const response = await fetch(`${API_URL}/register`, {
@@ -20,10 +20,10 @@ export const login = async (userId, password) => {
     const data = await response.json();
 
     if (response.ok && data.token) {
-      // ✅ store token
+      // âœ… store token
       localStorage.setItem('token', data.token);
 
-      // ✅ store userId manually (since backend doesn't send it)
+      // âœ… store userId manually (since backend doesn't send it)
       localStorage.setItem('userId', userId);
 
       return data;

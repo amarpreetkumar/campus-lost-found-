@@ -3,6 +3,7 @@ import React, {
   useState
 } from "react";
 
+import { apiUrl, assetUrl } from '../services/api';
 import "./returneditems.css";
 
 function ReturnedItems() {
@@ -15,7 +16,7 @@ function ReturnedItems() {
   useEffect(() => {
 
     fetch(
-      "http://localhost:5000/api/returned-items"
+      apiUrl('/returned-items')
     )
       .then((res) => res.json())
       .then((data) => setItems(data));
@@ -26,7 +27,7 @@ function ReturnedItems() {
     <div className="returned-page">
 
       <h1>
-        ✅ Recovered Items
+        âœ… Recovered Items
       </h1>
 
       <p className="returned-subtitle">
@@ -49,11 +50,11 @@ function ReturnedItems() {
           >
 
             <img
-            src={`http://localhost:5000${item.image_path}`}
+            src={assetUrl(item.image_path)}
             alt={item.title}
             onClick={() =>
                 setSelectedImage(
-                `http://localhost:5000${item.image_path}`
+                assetUrl(item.image_path)
                 )
             }
             />
@@ -69,11 +70,11 @@ function ReturnedItems() {
               </span>
 
               <p>
-                📂 {item.category}
+                ðŸ“‚ {item.category}
               </p>
 
               <p>
-                📍 {item.location}
+                ðŸ“ {item.location}
               </p>
 
             </div>

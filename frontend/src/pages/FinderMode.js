@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { apiUrl } from '../services/api';
 import "./finder.css";
 
 function FinderMode() {
@@ -41,7 +42,7 @@ function FinderMode() {
       setLoading(true);
 
       const res = await fetch(
-        "http://localhost:5000/api/items",
+        apiUrl('/items'),
         {
           method: "POST",
           headers: {
@@ -79,7 +80,7 @@ function FinderMode() {
     <div className="finder-container">
 
       <div className="finder-header">
-        <h1>🔍 Report Found Item</h1>
+        <h1>ðŸ” Report Found Item</h1>
         <p>
           Help someone get their belongings back.
         </p>
@@ -147,9 +148,9 @@ function FinderMode() {
           className="verification-box"
           placeholder="Hidden Verification Detail (NOT visible publicly)
 Example:
-• Name starts with A
-• Wallpaper is blue Lamborghini
-• Has Avengers sticker"
+â€¢ Name starts with A
+â€¢ Wallpaper is blue Lamborghini
+â€¢ Has Avengers sticker"
           value={verificationDetail}
           onChange={(e) =>
             setVerificationDetail(

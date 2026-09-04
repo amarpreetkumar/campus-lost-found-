@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { apiUrl, assetUrl } from '../services/api';
 import "./landing.css";
 
 function LandingPage() {
@@ -20,7 +21,7 @@ function LandingPage() {
 
   const fetchStats = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/stats");
+      const res = await fetch(apiUrl('/stats'));
       const data = await res.json();
       setStats(data);
     } catch (err) {
@@ -31,7 +32,7 @@ function LandingPage() {
   const fetchRecentItems = async () => {
     try {
       const res = await fetch(
-        "http://localhost:5000/api/public-items"
+        apiUrl('/public-items')
       );
 
       const data = await res.json();
@@ -73,7 +74,7 @@ function LandingPage() {
       <nav className="navbar">
 
         <div className="logo">
-          🛡️ Campus Lost & Found
+          ðŸ›¡ï¸ Campus Lost & Found
         </div>
 
         <div className="nav-links">
@@ -177,22 +178,22 @@ function LandingPage() {
         <div className="hero-right">
 
           <div className="floating-card card1">
-            📱 Electronics
+            ðŸ“± Electronics
             <span>Recently Reported</span>
           </div>
 
           <div className="floating-card card2">
-            🔑 Keys
+            ðŸ”‘ Keys
             <span>Campus Wide</span>
           </div>
 
           <div className="floating-card card3">
-            🪪 ID Cards
+            ðŸªª ID Cards
             <span>Student Recovery</span>
           </div>
 
           <div className="floating-card card4">
-            🎒 Bags
+            ðŸŽ’ Bags
             <span>Lost & Found</span>
           </div>
 
@@ -230,22 +231,22 @@ function LandingPage() {
         <div className="steps">
 
           <div className="step-card">
-            <span>🔍</span>
+            <span>ðŸ”</span>
             <h3>Find Item</h3>
           </div>
 
           <div className="step-card">
-            <span>📸</span>
+            <span>ðŸ“¸</span>
             <h3>Upload Details</h3>
           </div>
 
           <div className="step-card">
-            <span>🪪</span>
+            <span>ðŸªª</span>
             <h3>Verify Owner</h3>
           </div>
 
           <div className="step-card">
-            <span>🎉</span>
+            <span>ðŸŽ‰</span>
             <h3>Item Returned</h3>
           </div>
 
@@ -280,7 +281,7 @@ function LandingPage() {
               >
 
                 <img
-                  src={`http://localhost:5000${item.image_path}`}
+                  src={assetUrl(item.image_path)}
                   alt="found item"
                   className="recent-item-image"
                 />
@@ -288,7 +289,7 @@ function LandingPage() {
                 <h3>Found Item</h3>
 
                 <p>
-                  📍 {item.address}
+                  ðŸ“ {item.address}
                 </p>
 
                 <small>
@@ -318,7 +319,7 @@ function LandingPage() {
         <div className="features-grid">
 
           <div className="feature-card">
-            <h3>📸 Upload Found Items</h3>
+            <h3>ðŸ“¸ Upload Found Items</h3>
             <p>
               Quickly upload images and
               locations of found belongings.
@@ -326,7 +327,7 @@ function LandingPage() {
           </div>
 
           <div className="feature-card">
-            <h3>🔍 Search Lost Items</h3>
+            <h3>ðŸ” Search Lost Items</h3>
             <p>
               Browse recently uploaded items
               and recover belongings faster.
@@ -334,7 +335,7 @@ function LandingPage() {
           </div>
 
           <div className="feature-card">
-            <h3>🔒 Secure Authentication</h3>
+            <h3>ðŸ”’ Secure Authentication</h3>
             <p>
               JWT-protected user accounts
               and activity tracking.
@@ -410,7 +411,7 @@ function LandingPage() {
         </p>
 
         <p>
-          © 2026 Campus Lost & Found
+          Â© 2026 Campus Lost & Found
         </p>
 
       </footer>

@@ -431,3 +431,56 @@ A full-stack web application built to make recovering lost belongings on campus 
 ## ⭐ If You Like This Project
 
 If you find this project useful or interesting, consider giving the repository a ⭐ on GitHub.
+
+---
+
+## Deployment
+
+The project is now ready for a single-service deployment where the Express backend serves the React production build.
+
+### Recommended: Render web service
+
+1. Push this repository to GitHub.
+2. Open Render and choose **New +** -> **Blueprint**.
+3. Connect the GitHub repository.
+4. Render will detect `render.yaml` and create one web service named `campus-lost-found`.
+5. Confirm these settings if Render asks:
+   - Build command: `npm ci --prefix backend && npm ci --prefix frontend && npm run build --prefix frontend`
+   - Start command: `npm start --prefix backend`
+   - Health check path: `/api/health`
+   - Disk mount path: `/var/data`
+6. Add or confirm environment variables:
+   - `NODE_ENV=production`
+   - `DATA_DIR=/var/data`
+   - `JWT_SECRET=<generate a long random secret>`
+7. Deploy. After it finishes, open the Render service URL.
+
+The SQLite database and uploaded images are stored under `DATA_DIR`, so the Render disk is required if you want data to survive restarts/redeploys.
+
+### Split deployment option
+
+If you deploy the backend and frontend separately:
+
+1. Deploy `backend/` as a Node service.
+2. Set backend environment variables:
+   - `JWT_SECRET=<generate a long random secret>`
+   - `CLIENT_ORIGIN=<your frontend URL>`
+   - `DATA_DIR=<persistent data directory if your host supports it>`
+3. Deploy `frontend/` as a React static site.
+4. Set frontend environment variable before building:
+   - `REACT_APP_API_URL=<your backend origin, without /api>`
+
+Example: `REACT_APP_API_URL=https://campus-lost-found-api.onrender.com`
+
+### Local production test
+
+From the repository root:
+
+```bash
+npm ci --prefix backend
+npm ci --prefix frontend
+npm run build --prefix frontend
+JWT_SECRET=local-dev-secret NODE_ENV=production npm start --prefix backend
+```
+
+Then open `http://localhost:5000`.

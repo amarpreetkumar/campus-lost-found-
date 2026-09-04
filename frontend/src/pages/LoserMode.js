@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { apiUrl, assetUrl } from '../services/api';
 import "./loser.css";
 
 function LoserMode() {
@@ -19,7 +20,7 @@ function LoserMode() {
     const token = localStorage.getItem("token");
 
     const res = await fetch(
-      "http://localhost:5000/api/items",
+      apiUrl('/items'),
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -52,7 +53,7 @@ function LoserMode() {
     <div className="loser-container">
 
       <div className="loser-header">
-        <h1>📦 Browse Found Items</h1>
+        <h1>ðŸ“¦ Browse Found Items</h1>
         <p>
           Search campus-wide found belongings
         </p>
@@ -104,12 +105,12 @@ function LoserMode() {
 
             {item.image_path && (
               <img
-                src={`http://localhost:5000${item.image_path}`}
+                src={assetUrl(item.image_path)}
                 alt="item"
                 className="item-image"
                 onClick={() =>
                   setSelectedImage(
-                    `http://localhost:5000${item.image_path}`
+                    assetUrl(item.image_path)
                   )
                 }
               />
@@ -128,7 +129,7 @@ function LoserMode() {
             </p>
 
             <p className="location">
-              📍 {item.location}
+              ðŸ“ {item.location}
             </p>
 
             <button

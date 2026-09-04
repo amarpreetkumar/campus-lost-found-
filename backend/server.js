@@ -8,20 +8,33 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const PORT = 5000;
-const JWT_SECRET = 'campus-lnf-secret-key-2026';
+const PORT = process.env.PORT || 5000;
+const JWT_SECRET = process.env.JWT_SECRET;
+const DATA_DIR = process.env.DATA_DIR || __dirname;
+const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || '*';
 
-app.use(cors());
+if (!JWT_SECRET) {
+  throw new Error('JWT_SECRET environment variable is required');
+}
+
+if (!fs.existsSync(DATA_DIR)) {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+}
+
+app.use(cors({
+  origin: CLIENT_ORIGIN === '*' ? true : CLIENT_ORIGIN.split(','),
+  credentials: true
+}));
 app.use(express.json());
 
 /* =========================
    UPLOADS
 ========================= */
 
-const uploadsDir = path.join(__dirname, 'uploads');
+const uploadsDir = path.join(DATA_DIR, 'uploads');
 
 if (!fs.existsSync(uploadsDir)) {
-  fs.mkdirSync(uploadsDir);
+  fs.mkdirSync(uploadsDir, { recursive: true });
 }
 
 app.use('/uploads', express.static(uploadsDir));
@@ -30,7 +43,7 @@ app.use('/uploads', express.static(uploadsDir));
    DATABASE
 ========================= */
 
-const db = new Database('campus_lnf.db');
+const db = new Database(path.join(DATA_DIR, 'campus_lnf.db'));
 
 /* USERS */
 
@@ -680,20 +693,6 @@ app.get(
 );
 
 /* =========================
-   START SERVER
-========================= */
-
-app.listen(
-  PORT,
-  () => {
-    console.log(
-      `🚀 Campus Lost & Found Backend V3 running on port ${PORT}`
-    );
-  }
-);
-
-
-/* =========================
     ADMIN ROUTES
 ========================= */
 
@@ -957,3 +956,34 @@ app.delete(
 
   }
 );
+/* =========================
+   HEALTH CHECK
+========================= */
+
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
+
+/* =========================
+   PRODUCTION FRONTEND
+========================= */
+
+const frontendBuildDir = path.join(__dirname, '..', 'frontend', 'build');
+
+if (process.env.NODE_ENV === 'production' && fs.existsSync(frontendBuildDir)) {
+  app.use(express.static(frontendBuildDir));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(frontendBuildDir, 'index.html'));
+  });
+}
+
+/* =========================
+   START SERVER
+========================= */
+
+app.listen(PORT, () => {
+  console.log(`Campus Lost & Found backend running on port ${PORT}`);
+});
+
+

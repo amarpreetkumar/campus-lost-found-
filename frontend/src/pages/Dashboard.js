@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { isAuthenticated, logout, getUserId } from '../services/auth';
+import { apiUrl } from '../services/api';
 import './dashboard.css';
 
 function Dashboard() {
@@ -25,7 +26,7 @@ function Dashboard() {
   const fetchStats = async () => {
     try {
       const res = await fetch(
-        'http://localhost:5000/api/stats'
+        apiUrl('/stats')
       );
 
       const data = await res.json();
@@ -47,13 +48,13 @@ function Dashboard() {
       <nav className="dashboard-navbar">
 
         <div className="dashboard-logo">
-          🛡️ Campus Lost & Found
+          ðŸ›¡ï¸ Campus Lost & Found
         </div>
 
         <div className="dashboard-user">
 
           <span>
-            Welcome back, {getUserId()} 👋
+            Welcome back, {getUserId()} ðŸ‘‹
           </span>
 
           <button
@@ -111,7 +112,7 @@ function Dashboard() {
           onClick={() => navigate('/finder')}
         >
           <div className="action-icon">
-            🔍
+            ðŸ”
           </div>
 
           <h2>
@@ -129,7 +130,7 @@ function Dashboard() {
           onClick={() => navigate('/loser')}
         >
           <div className="action-icon">
-            📦
+            ðŸ“¦
           </div>
 
           <h2>
@@ -147,7 +148,7 @@ function Dashboard() {
           onClick={() => navigate('/review-claims')}
         >
           <div className="action-icon">
-            📋
+            ðŸ“‹
           </div>
 
           <h2>
@@ -165,7 +166,7 @@ function Dashboard() {
           onClick={() => navigate('/returned-items')}
         >
           <div className="action-icon">
-            ✅
+            âœ…
           </div>
 
           <h2>
@@ -183,7 +184,7 @@ function Dashboard() {
           onClick={() => navigate('/admin')}
         >
           <div className="action-icon">
-            👑
+            ðŸ‘‘
           </div>
 
           <h2>
@@ -207,19 +208,19 @@ function Dashboard() {
         <div className="activity-grid">
 
           <div className="activity-card">
-            📸 Upload Found Items
+            ðŸ“¸ Upload Found Items
           </div>
 
           <div className="activity-card">
-            📋 Review Ownership Claims
+            ðŸ“‹ Review Ownership Claims
           </div>
 
           <div className="activity-card">
-            🔒 Secure Authentication
+            ðŸ”’ Secure Authentication
           </div>
 
           <div className="activity-card">
-            ✅ Successful Recoveries
+            âœ… Successful Recoveries
           </div>
 
         </div>

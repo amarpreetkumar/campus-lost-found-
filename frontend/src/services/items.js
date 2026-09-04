@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+import { API_URL } from './api';
 
 export const uploadItem = async (formData) => {
   const token = localStorage.getItem('token');
@@ -21,3 +21,4 @@ export const getItems = async () => {
   });
   return response.json();
 };
+

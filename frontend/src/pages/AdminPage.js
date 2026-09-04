@@ -3,6 +3,7 @@ import React, {
   useState
 } from "react";
 
+import { apiUrl } from '../services/api';
 import "./admin.css";
 
 function AdminPage() {
@@ -39,7 +40,7 @@ function AdminPage() {
   const fetchStats = () => {
 
     fetch(
-      "http://localhost:5000/api/admin/stats",
+      apiUrl('/admin/stats'),
       {
         headers: {
           Authorization:
@@ -66,7 +67,7 @@ function AdminPage() {
   const fetchUsers = () => {
 
     fetch(
-      "http://localhost:5000/api/admin/users",
+      apiUrl('/admin/users'),
       {
         headers: {
           Authorization:
@@ -90,7 +91,7 @@ function AdminPage() {
   const fetchItems = () => {
 
     fetch(
-      "http://localhost:5000/api/admin/items",
+      apiUrl('/admin/items'),
       {
         headers: {
           Authorization:
@@ -114,7 +115,7 @@ function AdminPage() {
   const fetchClaims = () => {
 
     fetch(
-      "http://localhost:5000/api/admin/claims",
+      apiUrl('/admin/claims'),
       {
         headers: {
           Authorization:
@@ -146,7 +147,7 @@ function AdminPage() {
     }
 
     await fetch(
-      `http://localhost:5000/api/admin/items/${id}`,
+      apiUrl(`/admin/items/${id}`),
       {
         method: "DELETE",
         headers: {
@@ -172,7 +173,7 @@ function AdminPage() {
     }
 
     await fetch(
-      `http://localhost:5000/api/admin/users/${id}`,
+      apiUrl(`/admin/users/${id}`),
       {
         method: "DELETE",
         headers: {
@@ -193,7 +194,7 @@ function AdminPage() {
       <div className="admin-page">
 
         <h1>
-          ⛔ Access Denied
+          â›” Access Denied
         </h1>
 
         <p>
@@ -214,7 +215,7 @@ function AdminPage() {
     <div className="admin-page">
 
       <h1>
-        👑 Admin Panel
+        ðŸ‘‘ Admin Panel
       </h1>
 
       <div className="admin-grid">
@@ -359,3 +360,4 @@ function AdminPage() {
 }
 
 export default AdminPage;
+

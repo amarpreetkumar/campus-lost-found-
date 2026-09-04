@@ -74,7 +74,7 @@ function LandingPage() {
       <nav className="navbar">
 
         <div className="logo">
-          ðŸ›¡ï¸ Campus Lost & Found
+          🛡️ Campus Lost & Found
         </div>
 
         <div className="nav-links">
@@ -178,22 +178,22 @@ function LandingPage() {
         <div className="hero-right">
 
           <div className="floating-card card1">
-            ðŸ“± Electronics
+            📱 Electronics
             <span>Recently Reported</span>
           </div>
 
           <div className="floating-card card2">
-            ðŸ”‘ Keys
+            🔑 Keys
             <span>Campus Wide</span>
           </div>
 
           <div className="floating-card card3">
-            ðŸªª ID Cards
+            🪪 ID Cards
             <span>Student Recovery</span>
           </div>
 
           <div className="floating-card card4">
-            ðŸŽ’ Bags
+            🎒 Bags
             <span>Lost & Found</span>
           </div>
 
@@ -231,22 +231,22 @@ function LandingPage() {
         <div className="steps">
 
           <div className="step-card">
-            <span>ðŸ”</span>
+            <span>🔍</span>
             <h3>Find Item</h3>
           </div>
 
           <div className="step-card">
-            <span>ðŸ“¸</span>
+            <span>📸</span>
             <h3>Upload Details</h3>
           </div>
 
           <div className="step-card">
-            <span>ðŸªª</span>
+            <span>🪪</span>
             <h3>Verify Owner</h3>
           </div>
 
           <div className="step-card">
-            <span>ðŸŽ‰</span>
+            <span>🎉</span>
             <h3>Item Returned</h3>
           </div>
 
@@ -289,7 +289,7 @@ function LandingPage() {
                 <h3>Found Item</h3>
 
                 <p>
-                  ðŸ“ {item.address}
+                  📍 {item.address}
                 </p>
 
                 <small>
@@ -319,7 +319,7 @@ function LandingPage() {
         <div className="features-grid">
 
           <div className="feature-card">
-            <h3>ðŸ“¸ Upload Found Items</h3>
+            <h3>📸 Upload Found Items</h3>
             <p>
               Quickly upload images and
               locations of found belongings.
@@ -327,7 +327,7 @@ function LandingPage() {
           </div>
 
           <div className="feature-card">
-            <h3>ðŸ” Search Lost Items</h3>
+            <h3>🔍 Search Lost Items</h3>
             <p>
               Browse recently uploaded items
               and recover belongings faster.
@@ -335,7 +335,7 @@ function LandingPage() {
           </div>
 
           <div className="feature-card">
-            <h3>ðŸ”’ Secure Authentication</h3>
+            <h3>🔒 Secure Authentication</h3>
             <p>
               JWT-protected user accounts
               and activity tracking.
@@ -411,7 +411,7 @@ function LandingPage() {
         </p>
 
         <p>
-          Â© 2026 Campus Lost & Found
+          © 2026 Campus Lost & Found
         </p>
 
       </footer>

@@ -53,7 +53,7 @@ function LoserMode() {
     <div className="loser-container">
 
       <div className="loser-header">
-        <h1>ðŸ“¦ Browse Found Items</h1>
+        <h1>📦 Browse Found Items</h1>
         <p>
           Search campus-wide found belongings
         </p>
@@ -129,7 +129,7 @@ function LoserMode() {
             </p>
 
             <p className="location">
-              ðŸ“ {item.location}
+              📍 {item.location}
             </p>
 
             <button

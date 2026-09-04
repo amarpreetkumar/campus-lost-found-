@@ -80,7 +80,7 @@ function FinderMode() {
     <div className="finder-container">
 
       <div className="finder-header">
-        <h1>ðŸ” Report Found Item</h1>
+        <h1>🔍 Report Found Item</h1>
         <p>
           Help someone get their belongings back.
         </p>
@@ -148,9 +148,9 @@ function FinderMode() {
           className="verification-box"
           placeholder="Hidden Verification Detail (NOT visible publicly)
 Example:
-â€¢ Name starts with A
-â€¢ Wallpaper is blue Lamborghini
-â€¢ Has Avengers sticker"
+• Name starts with A
+• Wallpaper is blue Lamborghini
+• Has Avengers sticker"
           value={verificationDetail}
           onChange={(e) =>
             setVerificationDetail(

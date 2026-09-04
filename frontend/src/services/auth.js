@@ -20,10 +20,10 @@ export const login = async (userId, password) => {
     const data = await response.json();
 
     if (response.ok && data.token) {
-      // âœ… store token
+      // ✅ store token
       localStorage.setItem('token', data.token);
 
-      // âœ… store userId manually (since backend doesn't send it)
+      // ✅ store userId manually (since backend doesn't send it)
       localStorage.setItem('userId', userId);
 
       return data;

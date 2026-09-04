@@ -27,7 +27,7 @@ function ReturnedItems() {
     <div className="returned-page">
 
       <h1>
-        âœ… Recovered Items
+        ✅ Recovered Items
       </h1>
 
       <p className="returned-subtitle">
@@ -70,11 +70,11 @@ function ReturnedItems() {
               </span>
 
               <p>
-                ðŸ“‚ {item.category}
+                📂 {item.category}
               </p>
 
               <p>
-                ðŸ“ {item.location}
+                📍 {item.location}
               </p>
 
             </div>

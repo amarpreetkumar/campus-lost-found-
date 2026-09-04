@@ -48,13 +48,13 @@ function Dashboard() {
       <nav className="dashboard-navbar">
 
         <div className="dashboard-logo">
-          ðŸ›¡ï¸ Campus Lost & Found
+          🛡️ Campus Lost & Found
         </div>
 
         <div className="dashboard-user">
 
           <span>
-            Welcome back, {getUserId()} ðŸ‘‹
+            Welcome back, {getUserId()} 👋
           </span>
 
           <button
@@ -112,7 +112,7 @@ function Dashboard() {
           onClick={() => navigate('/finder')}
         >
           <div className="action-icon">
-            ðŸ”
+            🔍
           </div>
 
           <h2>
@@ -130,7 +130,7 @@ function Dashboard() {
           onClick={() => navigate('/loser')}
         >
           <div className="action-icon">
-            ðŸ“¦
+            📦
           </div>
 
           <h2>
@@ -148,7 +148,7 @@ function Dashboard() {
           onClick={() => navigate('/review-claims')}
         >
           <div className="action-icon">
-            ðŸ“‹
+            📋
           </div>
 
           <h2>
@@ -166,7 +166,7 @@ function Dashboard() {
           onClick={() => navigate('/returned-items')}
         >
           <div className="action-icon">
-            âœ…
+            ✅
           </div>
 
           <h2>
@@ -184,7 +184,7 @@ function Dashboard() {
           onClick={() => navigate('/admin')}
         >
           <div className="action-icon">
-            ðŸ‘‘
+            👑
           </div>
 
           <h2>
@@ -208,19 +208,19 @@ function Dashboard() {
         <div className="activity-grid">
 
           <div className="activity-card">
-            ðŸ“¸ Upload Found Items
+            📸 Upload Found Items
           </div>
 
           <div className="activity-card">
-            ðŸ“‹ Review Ownership Claims
+            📋 Review Ownership Claims
           </div>
 
           <div className="activity-card">
-            ðŸ”’ Secure Authentication
+            🔒 Secure Authentication
           </div>
 
           <div className="activity-card">
-            âœ… Successful Recoveries
+            ✅ Successful Recoveries
           </div>
 
         </div>

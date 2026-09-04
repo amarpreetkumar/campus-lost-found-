@@ -194,7 +194,7 @@ function AdminPage() {
       <div className="admin-page">
 
         <h1>
-          â›” Access Denied
+          ⛔ Access Denied
         </h1>
 
         <p>
@@ -215,7 +215,7 @@ function AdminPage() {
     <div className="admin-page">
 
       <h1>
-        ðŸ‘‘ Admin Panel
+        👑 Admin Panel
       </h1>
 
       <div className="admin-grid">

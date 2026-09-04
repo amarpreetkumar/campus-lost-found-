@@ -1,4 +1,4 @@
-# 🎓 Campus Lost & Found
+# ðŸŽ“ Campus Lost & Found
 
 A full-stack web application that helps students **report, discover, and recover lost belongings on campus** through a secure claim and ownership-verification workflow.
 
@@ -6,7 +6,7 @@ The platform connects students who find lost items with their potential owners, 
 
 ---
 
-## 📌 Overview
+## ðŸ“Œ Overview
 
 Losing personal belongings on campus can be frustrating, while found items often have no reliable way to reach their owners.
 
@@ -23,9 +23,9 @@ The application uses **JWT authentication, protected routes, role-based access l
 
 ---
 
-## ✨ Key Features
+## âœ¨ Key Features
 
-### 🔐 Authentication & Security
+### ðŸ” Authentication & Security
 
 * User registration and login
 * JWT-based authentication
@@ -35,7 +35,7 @@ The application uses **JWT authentication, protected routes, role-based access l
 * Finder-only visibility of claim details
 * Ownership verification before approval
 
-### 🔎 Found Item Discovery
+### ðŸ”Ž Found Item Discovery
 
 * Browse all available found items
 * Search items by name or description
@@ -44,7 +44,7 @@ The application uses **JWT authentication, protected routes, role-based access l
 * Fullscreen image preview
 * Location information for reported items
 
-### 📦 Finder Mode
+### ðŸ“¦ Finder Mode
 
 Users who find an item can report it by providing:
 
@@ -56,7 +56,7 @@ Users who find an item can report it by providing:
 
 Once submitted, the item becomes available for other users to browse.
 
-### 🙋 Claim System
+### ðŸ™‹ Claim System
 
 Users who believe an item belongs to them can submit a claim request.
 
@@ -69,7 +69,7 @@ The claim process includes:
 
 This helps prevent unauthorized users from simply claiming an item.
 
-### ✅ Claim Review
+### âœ… Claim Review
 
 The user who originally reported the item can review incoming claims.
 
@@ -81,13 +81,13 @@ The finder can:
 
 Only the finder associated with the item can access and manage its claims.
 
-### 🎒 Recovered Items
+### ðŸŽ’ Recovered Items
 
 Once a claim is approved, the item is moved from the active listings into the **Recovered Items** archive.
 
 Users can view previously recovered items and track the platform's recovery activity.
 
-### 📊 Dashboard
+### ðŸ“Š Dashboard
 
 The dashboard provides an overview of platform activity, including statistics related to:
 
@@ -98,98 +98,98 @@ The dashboard provides an overview of platform activity, including statistics re
 
 ---
 
-## 🔄 Application Workflow
+## ðŸ”„ Application Workflow
 
 ```text
-┌─────────────────────┐
-│   User Registers    │
-│      / Logs In      │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│    Finder Reports   │
-│     Lost Item       │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│   Item Appears in   │
-│    Browse Items     │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│ Potential Owner     │
-│ Submits a Claim     │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│ Ownership Details   │
-│   Are Verified      │
-└──────────┬──────────┘
-           │
-           ▼
-      ┌────┴────┐
-      │         │
-      ▼         ▼
-┌──────────┐ ┌──────────┐
-│ Approve  │ │  Reject  │
-│  Claim   │ │  Claim   │
-└────┬─────┘ └──────────┘
-     │
-     ▼
-┌─────────────────────┐
-│  Item Moved to      │
-│ Recovered Items     │
-└─────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚   User Registers    â”‚
+â”‚      / Logs In      â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+           â”‚
+           â–¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚    Finder Reports   â”‚
+â”‚     Lost Item       â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+           â”‚
+           â–¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚   Item Appears in   â”‚
+â”‚    Browse Items     â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+           â”‚
+           â–¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Potential Owner     â”‚
+â”‚ Submits a Claim     â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+           â”‚
+           â–¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Ownership Details   â”‚
+â”‚   Are Verified      â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+           â”‚
+           â–¼
+      â”Œâ”€â”€â”€â”€â”´â”€â”€â”€â”€â”
+      â”‚         â”‚
+      â–¼         â–¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Approve  â”‚ â”‚  Reject  â”‚
+â”‚  Claim   â”‚ â”‚  Claim   â”‚
+â””â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”˜ â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+     â”‚
+     â–¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚  Item Moved to      â”‚
+â”‚ Recovered Items     â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ---
 
-## 🖥️ Application Structure
+## ðŸ–¥ï¸ Application Structure
 
 The application is divided into a **React frontend** and a **Node.js/Express backend**.
 
 ```text
 campus-lost-found/
-│
-├── backend/
-│   ├── server.js
-│   ├── package.json
-│   └── campus_lnf.db
-│
-├── frontend/
-│   ├── public/
-│   │   └── index.html
-│   │
-│   └── src/
-│       ├── components/
-│       │   └── Navbar.js
-│       │
-│       ├── pages/
-│       │   ├── LandingPage.js
-│       │   ├── Login.js
-│       │   ├── Register.js
-│       │   ├── Dashboard.js
-│       │   ├── FinderMode.js
-│       │   ├── LoserMode.js
-│       │   ├── ClaimPage.js
-│       │   ├── ReviewClaims.js
-│       │   └── ReturnedItems.js
-│       │
-│       ├── services/
-│       │
-│       ├── App.js
-│       └── index.js
-│
-└── README.md
+â”‚
+â”œâ”€â”€ backend/
+â”‚   â”œâ”€â”€ server.js
+â”‚   â”œâ”€â”€ package.json
+â”‚   â””â”€â”€ campus_lnf.db
+â”‚
+â”œâ”€â”€ frontend/
+â”‚   â”œâ”€â”€ public/
+â”‚   â”‚   â””â”€â”€ index.html
+â”‚   â”‚
+â”‚   â””â”€â”€ src/
+â”‚       â”œâ”€â”€ components/
+â”‚       â”‚   â””â”€â”€ Navbar.js
+â”‚       â”‚
+â”‚       â”œâ”€â”€ pages/
+â”‚       â”‚   â”œâ”€â”€ LandingPage.js
+â”‚       â”‚   â”œâ”€â”€ Login.js
+â”‚       â”‚   â”œâ”€â”€ Register.js
+â”‚       â”‚   â”œâ”€â”€ Dashboard.js
+â”‚       â”‚   â”œâ”€â”€ FinderMode.js
+â”‚       â”‚   â”œâ”€â”€ LoserMode.js
+â”‚       â”‚   â”œâ”€â”€ ClaimPage.js
+â”‚       â”‚   â”œâ”€â”€ ReviewClaims.js
+â”‚       â”‚   â””â”€â”€ ReturnedItems.js
+â”‚       â”‚
+â”‚       â”œâ”€â”€ services/
+â”‚       â”‚
+â”‚       â”œâ”€â”€ App.js
+â”‚       â””â”€â”€ index.js
+â”‚
+â””â”€â”€ README.md
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## ðŸ› ï¸ Tech Stack
 
 | Layer          | Technology            |
 | -------------- | --------------------- |
@@ -204,40 +204,40 @@ campus-lost-found/
 
 ---
 
-## 🏗️ Architecture
+## ðŸ—ï¸ Architecture
 
 ```text
-                 ┌────────────────────┐
-                 │      React.js      │
-                 │     Frontend       │
-                 └─────────┬──────────┘
-                           │
+                 â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+                 â”‚      React.js      â”‚
+                 â”‚     Frontend       â”‚
+                 â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                           â”‚
                     HTTP / REST API
-                           │
-                           ▼
-                 ┌────────────────────┐
-                 │    Express.js      │
-                 │      Backend       │
-                 └─────────┬──────────┘
-                           │
-              ┌────────────┴────────────┐
-              │                         │
-              ▼                         ▼
-       ┌─────────────┐          ┌─────────────┐
-       │ JWT Auth    │          │   Multer    │
-       │ Middleware  │          │ File Upload │
-       └─────────────┘          └─────────────┘
-                           │
-                           ▼
-                 ┌────────────────────┐
-                 │      SQLite        │
-                 │     Database       │
-                 └────────────────────┘
+                           â”‚
+                           â–¼
+                 â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+                 â”‚    Express.js      â”‚
+                 â”‚      Backend       â”‚
+                 â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                           â”‚
+              â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+              â”‚                         â”‚
+              â–¼                         â–¼
+       â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”          â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+       â”‚ JWT Auth    â”‚          â”‚   Multer    â”‚
+       â”‚ Middleware  â”‚          â”‚ File Upload â”‚
+       â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜          â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                           â”‚
+                           â–¼
+                 â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+                 â”‚      SQLite        â”‚
+                 â”‚     Database       â”‚
+                 â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ---
 
-## 🔐 Security
+## ðŸ” Security
 
 Security is built into the application's core workflow.
 
@@ -263,7 +263,7 @@ An item is only moved into the recovered archive after the associated finder exp
 
 ---
 
-## 🚀 Getting Started
+## ðŸš€ Getting Started
 
 ### Prerequisites
 
@@ -314,7 +314,7 @@ http://localhost:3000
 
 ---
 
-## 🧑‍💻 Usage
+## ðŸ§‘â€ðŸ’» Usage
 
 ### 1. Create an Account
 
@@ -353,9 +353,9 @@ The person who reported the item receives access to the claim details and review
 
 The finder can either:
 
-**Approve** → The item is marked as recovered.
+**Approve** â†’ The item is marked as recovered.
 
-**Reject** → The item remains available for potential legitimate claims.
+**Reject** â†’ The item remains available for potential legitimate claims.
 
 ### 7. View Recovered Items
 
@@ -363,7 +363,7 @@ Approved items are moved into the **Recovered Items** archive.
 
 ---
 
-## 📂 Main Pages
+## ðŸ“‚ Main Pages
 
 | Page           | Purpose                            |
 | -------------- | ---------------------------------- |
@@ -379,26 +379,26 @@ Approved items are moved into the **Recovered Items** archive.
 
 ---
 
-## 🔮 Future Enhancements
+## ðŸ”® Future Enhancements
 
 The project can be extended with additional functionality such as:
 
-* 👨‍💼 Admin dashboard
-* 📧 Email notifications
-* 🔔 Real-time claim notifications
-* 🔍 Advanced search and filtering
-* 👤 User profiles
-* 🤖 AI-assisted ownership verification
-* 📈 Campus-wide analytics
-* 📍 Interactive campus maps
-* 📱 Progressive Web App support
-* 🖼️ AI-powered image similarity matching
-* 🏷️ Automatic item categorization
-* 📊 Recovery-rate analytics
+* ðŸ‘¨â€ðŸ’¼ Admin dashboard
+* ðŸ“§ Email notifications
+* ðŸ”” Real-time claim notifications
+* ðŸ” Advanced search and filtering
+* ðŸ‘¤ User profiles
+* ðŸ¤– AI-assisted ownership verification
+* ðŸ“ˆ Campus-wide analytics
+* ðŸ“ Interactive campus maps
+* ðŸ“± Progressive Web App support
+* ðŸ–¼ï¸ AI-powered image similarity matching
+* ðŸ·ï¸ Automatic item categorization
+* ðŸ“Š Recovery-rate analytics
 
 ---
 
-## 🎯 Project Goals
+## ðŸŽ¯ Project Goals
 
 The main goals of Campus Lost & Found are to:
 
@@ -412,7 +412,7 @@ The main goals of Campus Lost & Found are to:
 
 ---
 
-## 📌 Future Vision
+## ðŸ“Œ Future Vision
 
 The long-term vision is to turn Campus Lost & Found into an **intelligent campus recovery platform**.
 
@@ -420,7 +420,7 @@ With AI-powered image matching, smart item categorization, automated notificatio
 
 ---
 
-## 👥 Project
+## ðŸ‘¥ Project
 
 **Campus Lost & Found**
 
@@ -428,9 +428,9 @@ A full-stack web application built to make recovering lost belongings on campus 
 
 ---
 
-## ⭐ If You Like This Project
+## â­ If You Like This Project
 
-If you find this project useful or interesting, consider giving the repository a ⭐ on GitHub.
+If you find this project useful or interesting, consider giving the repository a â­ on GitHub.
 
 ---
 
@@ -448,14 +448,13 @@ The project is now ready for a single-service deployment where the Express backe
    - Build command: `npm ci --prefix backend && npm ci --prefix frontend && npm run build --prefix frontend`
    - Start command: `npm start --prefix backend`
    - Health check path: `/api/health`
-   - Disk mount path: `/var/data`
 6. Add or confirm environment variables:
    - `NODE_ENV=production`
-   - `DATA_DIR=/var/data`
+   - `DATA_DIR=/tmp/campus-lost-found`
    - `JWT_SECRET=<generate a long random secret>`
 7. Deploy. After it finishes, open the Render service URL.
 
-The SQLite database and uploaded images are stored under `DATA_DIR`, so the Render disk is required if you want data to survive restarts/redeploys.
+On Render's free tier, disks are not supported. This free Blueprint stores SQLite data and uploaded images in temporary storage, so data can be lost when the service restarts or redeploys. For a real production deployment, upgrade the service plan and add a persistent disk, then set DATA_DIR to the disk mount path, for example /var/data.
 
 ### Split deployment option
 

@@ -10,10 +10,6 @@ services:
       - key: NODE_ENV
         value: production
       - key: DATA_DIR
-        value: /var/data
+        value: /tmp/campus-lost-found
       - key: JWT_SECRET
         generateValue: true
-    disk:
-      name: campus-lost-found-data
-      mountPath: /var/data
-      sizeGB: 1

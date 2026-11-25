@@ -3,6 +3,11 @@
 echo "Starting Campus Lost & Found Application..."
 echo "=========================================="
 
+# Local development fallback only. Set a strong JWT_SECRET in production.
+if [ -z "${JWT_SECRET:-}" ]; then
+  export JWT_SECRET="local-dev-secret-change-this"
+fi
+
 # Start backend
 cd backend
 echo "Starting backend server..."

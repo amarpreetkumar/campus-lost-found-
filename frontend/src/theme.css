@@ -1,0 +1,268 @@
+:root {
+  --page-bg: #f3f7f5;
+  --surface: #ffffff;
+  --surface-soft: #e7f1ed;
+  --text: #183235;
+  --muted: #587073;
+  --border: #d4e2dc;
+  --primary: #087f73;
+  --primary-hover: #06665e;
+  --primary-dark: #123b42;
+  --success: #19745d;
+  --danger: #bf4d52;
+  --danger-hover: #a83e43;
+  --warning: #b56b15;
+  --shadow: 0 14px 36px rgba(20, 54, 52, 0.1);
+}
+
+html,
+body {
+  background: var(--page-bg);
+  color: var(--text);
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Public landing page keeps a rich, deep teal backdrop. */
+.landing {
+  background: linear-gradient(145deg, #123b42 0%, #087f73 100%) !important;
+  color: #f6fbf8;
+}
+
+.landing .navbar,
+.main-navbar,
+.dashboard-navbar {
+  background: rgba(13, 48, 53, 0.88) !important;
+  color: #f6fbf8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.main-navbar {
+  backdrop-filter: blur(18px);
+}
+
+.nav-logo,
+.dashboard-logo {
+  color: #f6fbf8;
+}
+
+.landing .nav-links button,
+.main-navbar .nav-links button {
+  background: rgba(255, 255, 255, 0.12);
+  color: #f6fbf8;
+}
+
+.landing .nav-links button:hover,
+.main-navbar .nav-links button:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.signup-btn,
+.primary-btn,
+.auth-card button,
+.finder-card button,
+.claim-card button,
+.claim-btn,
+.approve-btn,
+.dashboard-actions button {
+  background: var(--primary) !important;
+  color: #ffffff !important;
+}
+
+.signup-btn:hover,
+.primary-btn:hover,
+.auth-card button:hover,
+.finder-card button:hover,
+.claim-card button:hover,
+.claim-btn:hover,
+.approve-btn:hover {
+  background: var(--primary-hover) !important;
+}
+
+.landing .primary-btn {
+  background: #f6fbf8 !important;
+  color: var(--primary-dark) !important;
+}
+
+.landing .primary-btn:hover {
+  background: #dff1e9 !important;
+}
+
+.secondary-btn {
+  border-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.auth-page {
+  background: radial-gradient(circle at 15% 15%, #dceee7, transparent 38%),
+    linear-gradient(145deg, #edf5f1, #dcebe5) !important;
+}
+
+.auth-bg {
+  background: rgba(8, 127, 115, 0.13) !important;
+}
+
+.auth-card {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow) !important;
+}
+
+.auth-card .subtitle,
+.auth-card .switch-link,
+.auth-card .switch-link a {
+  color: var(--muted) !important;
+}
+
+.dashboard-page,
+.finder-container,
+.loser-container,
+.claim-container,
+.review-container,
+.returned-page,
+.admin-page {
+  background: var(--page-bg) !important;
+  color: var(--text) !important;
+}
+
+.dashboard-hero p,
+.action-card p,
+.finder-header p,
+.loser-header p,
+.description,
+.returned-subtitle {
+  color: var(--muted) !important;
+}
+
+.stat-box,
+.action-card,
+.activity-card,
+.finder-card,
+.item-card,
+.claim-card,
+.admin-card,
+.admin-row,
+.returned-card {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.stat-box h2,
+.stat-box p,
+.action-card h2,
+.action-card p,
+.activity-card h3,
+.activity-card p,
+.item-card h2,
+.item-card p,
+.claim-card h1,
+.claim-card p,
+.admin-card h2,
+.admin-row,
+.returned-content {
+  color: var(--text);
+}
+
+.filters input,
+.filters select,
+.finder-card input,
+.finder-card textarea,
+.finder-card select,
+.claim-card input,
+.claim-card textarea,
+.auth-card input {
+  background: #fbfdfc;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.filters input:focus,
+.filters select:focus,
+.finder-card input:focus,
+.finder-card textarea:focus,
+.finder-card select:focus,
+.claim-card input:focus,
+.claim-card textarea:focus,
+.auth-card input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(8, 127, 115, 0.14);
+}
+
+.filters input::placeholder,
+.finder-card input::placeholder,
+.finder-card textarea::placeholder,
+.claim-card input::placeholder,
+.claim-card textarea::placeholder {
+  color: #718689;
+}
+
+.verification-box {
+  border-color: var(--warning) !important;
+}
+
+.verification-box::placeholder {
+  color: #718689 !important;
+}
+
+.item-category,
+.image-preview {
+  background: var(--surface-soft) !important;
+  color: var(--primary-dark);
+}
+
+.empty-state {
+  background: var(--surface) !important;
+  color: var(--muted) !important;
+  border: 1px solid var(--border);
+}
+
+.returned-badge,
+.admin-badge {
+  background: #dff1e9 !important;
+  color: var(--success) !important;
+}
+
+.user-badge {
+  background: #dcebef !important;
+  color: #2b6470 !important;
+}
+
+.logout-nav,
+.logout-btn,
+.reject-btn,
+.delete-btn {
+  background: var(--danger) !important;
+  color: #ffffff !important;
+}
+
+.logout-nav:hover,
+.logout-btn:hover,
+.reject-btn:hover,
+.delete-btn:hover {
+  background: var(--danger-hover) !important;
+}
+
+.error {
+  background: #fff0ef !important;
+  border-color: #efc2bf !important;
+  color: #9f3438;
+}
+
+.image-modal {
+  background: rgba(13, 35, 38, 0.9) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

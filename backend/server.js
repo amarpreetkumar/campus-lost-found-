@@ -376,7 +376,16 @@ app.get(
 
     const item =
       db.prepare(`
-        SELECT *
+        SELECT
+          id,
+          finder_id,
+          title,
+          category,
+          description,
+          image_path,
+          location,
+          status,
+          created_at
         FROM items
         WHERE id = ?
       `).get(

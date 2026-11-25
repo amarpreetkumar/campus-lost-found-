@@ -287,7 +287,19 @@ Open a terminal:
 ```bash
 cd backend
 npm install
+```
+
+Set a development JWT secret, then start the backend. In PowerShell:
+
+```powershell
+$env:JWT_SECRET = "local-dev-secret-change-this"
 npm start
+```
+
+On macOS or Linux:
+
+```bash
+JWT_SECRET=local-dev-secret-change-this npm start
 ```
 
 The backend server will run on:
@@ -305,6 +317,8 @@ cd frontend
 npm install
 npm start
 ```
+
+The frontend development server proxies `/api` and `/uploads` requests to the backend on port 5000.
 
 The frontend will run on:
 
@@ -483,5 +497,15 @@ JWT_SECRET=local-dev-secret NODE_ENV=production npm start --prefix backend
 ```
 
 Then open `http://localhost:5000`.
+
+### Admin access
+
+New accounts are regular users. To grant an account admin access in a local development database, stop the backend and run this SQL against `backend/campus_lnf.db`:
+
+```sql
+UPDATE users SET role = 'admin' WHERE user_id = 'YOUR_USER_ID';
+```
+
+There is no in-app admin promotion flow. Do not expose database access or admin credentials to untrusted users.
 
 link:https://campus-lost-found-ug7f.onrender.com
